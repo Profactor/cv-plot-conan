@@ -10,7 +10,7 @@ environment:
     CONAN_UPLOAD: "https://api.bintray.com/conan/wpalfi/conan"
     CONAN_ARCHS: x86_64
     #CONAN_BUILD_TYPES: Release
-    CONAN_VISUAL_RUNTIMES: MD
+    #CONAN_VISUAL_RUNTIMES: MD
     CONAN_STABLE_BRANCH_PATTERN: i-will-tell-you-when-something-is-stable
 
     matrix:
