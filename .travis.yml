@@ -6,6 +6,7 @@ env:
      - CONAN_LOGIN_USERNAME: "wpalfi"
      - CONAN_CHANNEL: "testing"
      - CONAN_UPLOAD: "https://api.bintray.com/conan/wpalfi/conan"
+     - CONAN_ARCHS: x86_64
      - CONAN_STABLE_BRANCH_PATTERN: i-will-tell-you-when-something-is-stable
 
 linux: &linux
