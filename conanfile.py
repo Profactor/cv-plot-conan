@@ -2,8 +2,6 @@ from conans import ConanFile, CMake, tools
 
 
 class CvplotConan(ConanFile):
-    name = "cv-plot"
-    version = "1.0"
     license = "MIT"
     author = "PROFACTOR GmbH - https://www.profactor.at/"
     url = "https://github.com/wpalfi/cv-plot-conan.git"
