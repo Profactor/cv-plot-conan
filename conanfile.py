@@ -30,7 +30,7 @@ class CvplotConan(ConanFile):
         self.copy("*CvPlot.lib", dst="lib", keep_path=False)
         self.copy("*CvPlot.dll", dst="bin", keep_path=False)
         self.copy("*CvPlot.so", dst="lib", keep_path=False)
-        self.copy("*CvPlot.dylib", dst="lib", keep_path=False)
+        self.copy("*CvPlot.dylib", dst="bin", keep_path=False)
         self.copy("*CvPlot.a", dst="lib", keep_path=False)
 
     def package_info(self):
