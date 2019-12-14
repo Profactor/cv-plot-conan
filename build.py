@@ -11,14 +11,7 @@ if __name__ == "__main__":
         if settings["compiler.libcxx"] == "libstdc++": #opencv requires c++11
             continue
             
-        options = options.copy()
-        options["opencv:shared"] = False
         filtered_builds.append([settings, options, env_vars, build_requires, reference])
-        
-        if options["cv-plot:shared"] == True:
-            options = options.copy()
-            options["opencv:shared"] = True
-            filtered_builds.append([settings, options, env_vars, build_requires, reference])
             
     builder.builds = filtered_builds
     

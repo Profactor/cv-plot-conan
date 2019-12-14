@@ -13,6 +13,9 @@ class CvplotConan(ConanFile):
     requires = "opencv/4.1.1@conan/stable"
     generators = "cmake"
 
+    def config_options(self):
+        self.options["opencv"].shared = self.options.shared
+    
     def source(self):
         self.run("git clone https://github.com/wpalfi/cv-plot.git")
 
