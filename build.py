@@ -15,7 +15,7 @@ if __name__ == "__main__":
         options["opencv:shared"] = False
         filtered_builds.append([settings, options, env_vars, build_requires, reference])
         
-        if settings["cv-plot:shared"] == True:
+        if options["cv-plot:shared"] == True:
             options["opencv:shared"] = True
             filtered_builds.append([settings, options, env_vars, build_requires, reference])
             
