@@ -8,7 +8,7 @@ if __name__ == "__main__":
     filtered_builds = []
     for settings, options, env_vars, build_requires, reference in builder.items:
         
-        if settings["compiler.libcxx"] == "libstdc++": #opencv requires c++11
+        if "compiler.libcxx" in settings and settings["compiler.libcxx"] == "libstdc++": #opencv requires c++11
             continue
             
         filtered_builds.append([settings, options, env_vars, build_requires, reference])
