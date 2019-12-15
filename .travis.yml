@@ -1,7 +1,7 @@
 
 env:
    global:
-     - CONAN_REFERENCE: "cv-plot/master"
+     - CONAN_REFERENCE: "CvPlot/master"
      - CONAN_USERNAME: "wpalfi"
      - CONAN_LOGIN_USERNAME: "wpalfi"
      - CONAN_CHANNEL: "testing"
