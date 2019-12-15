@@ -9,7 +9,7 @@ class CvplotConan(ConanFile):
     topics = ("plot", "opencv")
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False],
-            "header_only": [True False]}
+            "header_only": [True, False]}
     default_options = {"shared": False, "header_only": False}
     requires = "opencv/4.1.1@conan/stable"
     generators = "cmake"
