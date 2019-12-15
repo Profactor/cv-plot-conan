@@ -44,7 +44,7 @@ class CvplotConan(ConanFile):
 
     def package_info(self):
         if self.options.header_only:
-            self.cpp_info.defines.append("CVPLOT_HEADER_ONLYW")
+            self.cpp_info.defines.append("CVPLOT_HEADER_ONLY")
         else:
             self.cpp_info.libs = ["CvPlot"]
             if self.options.shared:
