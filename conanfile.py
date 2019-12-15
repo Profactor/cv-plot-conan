@@ -13,6 +13,7 @@ class CvplotConan(ConanFile):
     default_options = {"shared": False, "header_only": False}
     requires = "opencv/4.1.1@conan/stable"
     generators = "cmake"
+    exports_sources = "FindCvPlot.cmake"
 
     def config_options(self):
         if 'shared' in self.options:
@@ -44,6 +45,7 @@ class CvplotConan(ConanFile):
             self.copy("*CvPlot.so", dst="lib", keep_path=False)
             self.copy("*CvPlot.dylib", dst="lib", keep_path=False)
             self.copy("*CvPlot.a", dst="lib", keep_path=False)
+        self.copy("FindCvPlot.cmake", dst=".", keep_path=False)
 
     def package_info(self):
         if self.options.header_only:

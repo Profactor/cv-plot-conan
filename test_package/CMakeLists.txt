@@ -1,17 +1,15 @@
-cmake_minimum_required(VERSION 2.8.12)
 project(PackageTest CXX)
+cmake_minimum_required (VERSION 3.9)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+conan_basic_setup(TARGETS)
+
+find_package("CvPlot" REQUIRED)
 
 add_executable(example example.cpp)
-target_link_libraries(example ${CONAN_LIBS})
+target_link_libraries(example CvPlot::CvPlot)
 
-#todo move to conanfile
-target_compile_features(example PUBLIC cxx_std_11)
-
-# CTest is a testing tool that can be used to test your project.
-# enable_testing()
-# add_test(NAME example
-#          WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
-#          COMMAND example)
+enable_testing()
+add_test(NAME example
+         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+         COMMAND example)
