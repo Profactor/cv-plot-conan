@@ -1,5 +1,5 @@
 from cpt.packager import ConanMultiPackager
-
+import os
 
 if __name__ == "__main__":
     builder = ConanMultiPackager()
@@ -12,7 +12,10 @@ if __name__ == "__main__":
             continue
             
         filtered_builds.append([settings, options, env_vars, build_requires, reference])
-            
+    
     builder.builds = filtered_builds
+        
+    if CVPLOT_HEADER_ONLY in os.environ:
+        builder.add(options={"header_only": True})
     
     builder.run()

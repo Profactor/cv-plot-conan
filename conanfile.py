@@ -8,18 +8,27 @@ class CvplotConan(ConanFile):
     description = "fast modular opencv plotting library"
     topics = ("plot", "opencv")
     settings = "os", "compiler", "build_type", "arch"
-    options = {"shared": [True, False]}
-    default_options = {"shared": False}
+    options = {"shared": [True, False],
+            "header_only": [True False]}
+    default_options = {"shared": False, "header_only": False}
     requires = "opencv/4.1.1@conan/stable"
     generators = "cmake"
 
     def config_options(self):
-        self.options["opencv"].shared = self.options.shared
+        if 'shared' in self.options:
+            self.options["opencv"].shared = self.options.shared
     
+    def configure(self):
+        if self.options.header_only:
+            self.settings.clear()
+            self.options.remove("shared")
+            
     def source(self):
         self.run("git clone https://github.com/wpalfi/cv-plot.git")
 
     def build(self):
+        if self.options.header_only:
+            return
         cmake = CMake(self)
         cmake.definitions["CVPLOT_HEADER_ONLY"] = False		
         cmake.configure(source_folder="cv-plot")
