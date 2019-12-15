@@ -15,7 +15,7 @@ if __name__ == "__main__":
     
     builder.builds = filtered_builds
         
-    if CVPLOT_HEADER_ONLY in os.environ:
+    if 'CVPLOT_HEADER_ONLY' in os.environ:
         builder.add(options={"header_only": True})
     
     builder.run()
