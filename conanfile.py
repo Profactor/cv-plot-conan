@@ -36,11 +36,14 @@ class CvplotConan(ConanFile):
 
     def package(self):
         self.copy("*.h", dst="include", src="cv-plot/CvPlot/inc")
-        self.copy("*CvPlot.lib", dst="lib", keep_path=False)
-        self.copy("*CvPlot.dll", dst="bin", keep_path=False)
-        self.copy("*CvPlot.so", dst="lib", keep_path=False)
-        self.copy("*CvPlot.dylib", dst="lib", keep_path=False)
-        self.copy("*CvPlot.a", dst="lib", keep_path=False)
+        if self.options.header_only:
+            self.copy("*.ipp", dst="include", src="cv-plot/CvPlot/inc")
+        else:
+            self.copy("*CvPlot.lib", dst="lib", keep_path=False)
+            self.copy("*CvPlot.dll", dst="bin", keep_path=False)
+            self.copy("*CvPlot.so", dst="lib", keep_path=False)
+            self.copy("*CvPlot.dylib", dst="lib", keep_path=False)
+            self.copy("*CvPlot.a", dst="lib", keep_path=False)
 
     def package_info(self):
         if self.options.header_only:
