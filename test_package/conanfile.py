@@ -1,5 +1,4 @@
 import os
-import platform
 from conans import ConanFile, CMake, tools
 
 
@@ -22,8 +21,4 @@ class CvplotTestConan(ConanFile):
     def test(self):
         if not tools.cross_building(self.settings):
             os.chdir("bin")
-            print(platform.system())
-            if platform.system() == "Darwin":
-                self.run("LD_LIBRARY_PATH=$(pwd) & ./example")
-            else:
-                self.run(".%sexample" % os.sep)
+            self.run(".%sexample" % os.sep, run_environment=True)
