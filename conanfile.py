@@ -4,6 +4,7 @@ from conans import ConanFile, CMake, tools
 class CvplotConan(ConanFile):
     license = "MIT"
     author = "PROFACTOR GmbH - https://www.profactor.at/"
+    homepage = "https://github.com/wpalfi/cv-plot.git"
     url = "https://github.com/wpalfi/cv-plot-conan.git"
     description = "fast modular opencv plotting library"
     topics = ("plot", "opencv")
@@ -25,7 +26,7 @@ class CvplotConan(ConanFile):
             self.options.remove("shared")
             
     def source(self):
-        self.run("git clone https://github.com/wpalfi/cv-plot.git")
+        self.run("git clone %s -b release/%s" % (self.homepage,self.version))
 
     def build(self):
         if self.options.header_only:
