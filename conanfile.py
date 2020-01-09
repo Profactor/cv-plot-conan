@@ -4,8 +4,8 @@ from conans import ConanFile, CMake, tools
 class CvplotConan(ConanFile):
     license = "MIT"
     author = "PROFACTOR GmbH - https://www.profactor.at/"
-    homepage = "https://github.com/wpalfi/cv-plot.git"
-    url = "https://github.com/wpalfi/cv-plot-conan.git"
+    homepage = "https://github.com/Profactor/cv-plot.git"
+    url = "https://github.com/Profactor/cv-plot-conan.git"
     description = "fast modular opencv plotting library"
     topics = ("plot", "opencv")
     settings = "os", "compiler", "build_type", "arch"

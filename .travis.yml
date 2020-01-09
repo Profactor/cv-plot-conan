@@ -2,10 +2,10 @@
 env:
    global:
      - CONAN_REFERENCE: "CvPlot/1.0"
-     - CONAN_USERNAME: "wpalfi"
+     - CONAN_USERNAME: "profactor"
      - CONAN_LOGIN_USERNAME: "wpalfi"
      - CONAN_CHANNEL: "stable"
-     - CONAN_UPLOAD: "https://api.bintray.com/conan/wpalfi/conan"
+     - CONAN_UPLOAD: "https://api.bintray.com/conan/profactor/conan"
      - CONAN_ARCHS: x86_64
      - CONAN_STABLE_BRANCH_PATTERN: i-will-tell-you-when-something-is-stable
      - CONAN_OPTIONS: opencv:shared=True

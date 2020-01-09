@@ -3,6 +3,6 @@
 [![Build Status](https://travis-ci.org/wpalfi/cv-plot-conan.svg?branch=release%2F1.0)](https://travis-ci.org/wpalfi/cv-plot-conan)
 
 # cv-plot-conan
-conan recipe for cv-plot https://github.com/wpalfi/cv-plot
+conan recipe for cv-plot https://github.com/Profactor/cv-plot
 
 
