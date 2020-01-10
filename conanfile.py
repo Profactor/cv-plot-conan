@@ -37,6 +37,7 @@ class CvplotConan(ConanFile):
         cmake.build()
 
     def package(self):
+        self.copy("LICENSE", src="cv-plot")
         self.copy("*.h", dst="include", src="cv-plot/CvPlot/inc")
         if self.options.header_only:
             self.copy("*.ipp", dst="include", src="cv-plot/CvPlot/inc")
