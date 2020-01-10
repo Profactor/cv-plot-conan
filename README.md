@@ -1,6 +1,6 @@
- [ ![Download](https://api.bintray.com/packages/wpalfi/conan/CvPlot%3Awpalfi/images/download.svg) ](https://bintray.com/wpalfi/conan/CvPlot%3Awpalfi/_latestVersion)
-[![Build status](https://ci.appveyor.com/api/projects/status/5c5md79v2b5o0g8o/branch/release/1.0?svg=true)](https://ci.appveyor.com/project/WernerPalfinger/cv-plot-conan/branch/release/1.0)
-[![Build Status](https://travis-ci.org/wpalfi/cv-plot-conan.svg?branch=release%2F1.0)](https://travis-ci.org/wpalfi/cv-plot-conan)
+[ ![Download](https://api.bintray.com/packages/profactor/conan/CvPlot%3Aprofactor-public/images/download.svg) ](https://bintray.com/profactor/conan/CvPlot%3Aprofactor-public/_latestVersion)
+[![Build status](https://ci.appveyor.com/api/projects/status/5c5md79v2b5o0g8o?svg=true)](https://ci.appveyor.com/project/Profactor/cv-plot-conan)
+[![Build Status](https://travis-ci.org/Profactor/cv-plot-conan.svg)](https://travis-ci.org/Profactor/cv-plot-conan)
 
 # cv-plot-conan
 conan recipe for cv-plot https://github.com/Profactor/cv-plot
