@@ -4,7 +4,7 @@ environment:
     PYTHON: "C:\\Python37"
 
     CONAN_REFERENCE: "CvPlot/1.0"
-    CONAN_USERNAME: "profactor"
+    CONAN_USERNAME: "profactor-public"
     CONAN_LOGIN_USERNAME: "wpalfi"
     CONAN_CHANNEL: "stable"
     CONAN_UPLOAD: "https://api.bintray.com/conan/profactor/conan"
