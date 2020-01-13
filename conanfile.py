@@ -26,7 +26,7 @@ class CvplotConan(ConanFile):
             self.options.remove("shared")
             
     def source(self):
-        self.run("git clone %s -b release/%s" % (self.homepage,self.version))
+        self.run("git clone %s -b release/%s --depth 1" % (self.homepage,self.version))
 
     def build(self):
         if self.options.header_only:
