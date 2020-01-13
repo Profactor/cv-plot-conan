@@ -9,5 +9,8 @@ elseif(TARGET CONAN_PKG::CvPlot)
     set(CvPlot_FOUND TRUE)
 else()
     set(CvPlot_FOUND FALSE)
+    if(CvPlot_FIND_REQUIRED)
+        message(FATAL_ERROR "Unable to find CONAN_PKG::CvPlot, did you forget conan_basic_setup(TARGETS)?")
+    endif()
 endif()
 
