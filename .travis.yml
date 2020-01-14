@@ -1,7 +1,7 @@
 
 env:
    global:
-     - CONAN_REFERENCE: "CvPlot/1.0"
+     - CONAN_REFERENCE: "CvPlot/1.1"
      - CONAN_USERNAME: "profactor-public"
      - CONAN_LOGIN_USERNAME: "wpalfi"
      - CONAN_CHANNEL: "stable"
