@@ -12,7 +12,7 @@ class CvplotConan(ConanFile):
     options = {"shared": [True, False],
             "header_only": [True, False]}
     default_options = {"shared": False, "header_only": False}
-    requires = "opencv/4.1.1@conan/stable"
+    requires = "opencv/4.1.0@conan/stable"
     generators = "cmake"
     exports_sources = "FindCvPlot.cmake"
 
