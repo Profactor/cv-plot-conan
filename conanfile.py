@@ -1,4 +1,5 @@
 from conans import ConanFile, CMake, tools
+import re
 
 
 class CvplotConan(ConanFile):
@@ -27,7 +28,14 @@ class CvplotConan(ConanFile):
             
     def source(self):
         self.run("git clone %s -b release/%s --depth 1" % (self.homepage,self.version))
+        self.testVersion()
 
+    def testVersion(self):
+        content = tools.load("cv-plot/CvPlot/inc/CvPlot/version.h")
+        r = re.search("#define CVPLOT_VERSION \"(.+)\"",content)
+        if r[1]!=self.version:
+            raise Exception("Version mismatch. Expected %s but found %s" % (self.version,r[1]))
+            
     def build(self):
         if self.options.header_only:
             return
