@@ -3,7 +3,6 @@ build: false
 environment:
     PYTHON: "C:\\Python37"
 
-    CONAN_REFERENCE: "CvPlot/1.2"
     CONAN_USERNAME: "profactor-public"
     CONAN_LOGIN_USERNAME: "wpalfi"
     CONAN_CHANNEL: "stable"

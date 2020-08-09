@@ -1,8 +1,18 @@
 from cpt.packager import ConanMultiPackager
 import os
+from conans import tools
+
+def getReference():
+    git = tools.Git(folder=".")
+    branch = git.get_branch()
+    match = re.match(r"^release/(.+)$", branch)
+    if not match:
+        raise Exception('Not a release branch name: %s' % branch)
+    version = match.group(1)
+    return "CvPlot/%s" % version
 
 if __name__ == "__main__":
-    builder = ConanMultiPackager()
+    builder = ConanMultiPackager(reference=getReference())
     
     if 'CVPLOT_HEADER_ONLY' in os.environ:
         builder.add(options={"CvPlot:header_only": True})
