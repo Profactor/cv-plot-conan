@@ -1,6 +1,7 @@
 from cpt.packager import ConanMultiPackager
 import os
 from conans import tools
+import re
 
 def getReference():
     git = tools.Git(folder=".")
