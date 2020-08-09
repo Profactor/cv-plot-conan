@@ -1,6 +1,7 @@
 
 env:
    global:
+     - CVPLOT_CI_BRANCH: $TRAVIS_BRANCH
      - CONAN_USERNAME: "profactor-public"
      - CONAN_LOGIN_USERNAME: "wpalfi"
      - CONAN_CHANNEL: "stable"

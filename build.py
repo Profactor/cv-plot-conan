@@ -1,11 +1,9 @@
 from cpt.packager import ConanMultiPackager
 import os
-from conans import tools
 import re
 
 def getReference():
-    git = tools.Git(folder=".")
-    branch = git.get_branch()
+    branch = os.environ['CVPLOT_CI_BRANCH']
     match = re.match(r"^release/(.+)$", branch)
     if not match:
         raise Exception('Not a release branch name: %s' % branch)
